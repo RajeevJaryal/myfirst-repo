@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subscribe to StreamX</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/subscribe.css') }}">
+</head>
+<body>
+  <div class="subscribe-container">
+    <h1>Subscribe to StreamX</h1>
+    <form action="/subscribe" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      
+      <select name="plan" required>
+        <option value="" disabled selected>Select Subscription Plan</option>
+        <option value="free">Free</option>
+        <option value="premium">Premium - ₹199/month</option>
+        <option value="family">Family - ₹299/month</option>
+      </select>
+
+      <input type="password" name="password" placeholder="Create Password" required />
+
+      <button type="submit">Subscribe Now</button>
+    </form>
+  </div>
+</body>
+</html>
